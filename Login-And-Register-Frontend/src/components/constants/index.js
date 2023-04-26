@@ -1,5 +1,4 @@
 export const navLinks = [
-<<<<<<< HEAD
   {
     id: "home",
     title: "Home",
@@ -26,39 +25,10 @@ export const navLinks = [
     link: "",
   },
 ];
-=======
-    {
-      id: "home",
-      title: "Home",
-      link: ""
-    },
-    {
-      id: "internships",
-      title: "Internships",
-      link: ""
-    },
-    {
-      id: "events",
-      title: "Events",
-      link: ""
-    },
-    {
-      id: "contact",
-      title: "Contact Us",
-      link: ""
-    },
-    {
-      id: "logout",
-      title: "Logout",
-      link: ""
-    },
-  ];
->>>>>>> cd47e74cfa1b4b413b3643cb71cfc64ddebc6e79
 
 export const images = [
   "C:UsersKIITOneDriveDesktopMinor ProjectFrontend_tempLogin-And-Register-Frontendsrccomponentsassetsinternship.jpg",
   "C:UsersKIITOneDriveDesktopMinor ProjectFrontend_tempLogin-And-Register-Frontendsrccomponentsassetsevent.jpg",
-<<<<<<< HEAD
 ];
 
 export const eventDetails = [
@@ -111,6 +81,3 @@ export const eventDetails = [
     desc: "hghgh",
   },
 ];
-=======
-];
->>>>>>> cd47e74cfa1b4b413b3643cb71cfc64ddebc6e79

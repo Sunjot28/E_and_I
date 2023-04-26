@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import Logo from "./Logo";
 import Navb from "./Navb";
@@ -37,20 +36,5 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
-=======
-import React from "react"
-import Navb from "./Navb"
-import Slides from "./Slides"
-
-const Homepage = () => {
-    return(
-        <div>
-            <Navb />
-            <Slides /> 
-        </div>
-    )
-}
-
 export default Homepage
->>>>>>> cd47e74cfa1b4b413b3643cb71cfc64ddebc6e79
+

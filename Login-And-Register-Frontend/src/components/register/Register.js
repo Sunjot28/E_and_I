@@ -1,9 +1,6 @@
 import React, {useState} from "react"
 import "./register.css"
-<<<<<<< HEAD
 import Logo from "../Logo"
-=======
->>>>>>> cd47e74cfa1b4b413b3643cb71cfc64ddebc6e79
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 
@@ -59,7 +56,6 @@ const Register = () => {
       }
 
     return (
-<<<<<<< HEAD
       <div>
         <Logo />
 
@@ -130,74 +126,6 @@ const Register = () => {
               </button>
             </div>
           </div>
-=======
-      <div className="center">
-        <div className="outerbox">
-          <div className="leftbox2">
-            <h1>Already have an account?</h1>
-            <div>
-              <button
-                type="button"
-                onClick={() => navigate("/")}
-                class="rbutton btn btn-secondary btn-lg"
-              >
-                Login
-              </button>
-            </div>
-          </div>
-
-          <div className="rightbox2">
-            <h1>Create Account</h1>
-            <input
-              type="text"
-              onChange={handleChange}
-              name="name"
-              value={user.name}
-              placeholder="Your Name"
-            ></input>
-            <input
-              type="text"
-              onChange={handleChange}
-              name="email"
-              value={user.email}
-              placeholder="Your Email"
-            ></input>
-            <input
-              type="password"
-              onChange={handleChange}
-              name="password"
-              value={user.password}
-              placeholder="Your Password"
-            ></input>
-            <input
-              type="password"
-              onChange={handleChange}
-              name="reEnterPassword"
-              value={user.reEnterPassword}
-              placeholder="Re-enter Password"
-            ></input>
-            <button
-              type="button"
-              onClick={register}
-              class="lbutton btn btn-secondary btn-lg"
-            >
-              Sign Up
-            </button>
-
-            <div className="or">OR</div>
-
-            <button
-              type="button"
-              class="googlebutton btn btn-outline-secondary"
-            >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                alt="google"
-              />
-              SignUp with Google
-            </button>
-          </div>
->>>>>>> cd47e74cfa1b4b413b3643cb71cfc64ddebc6e79
         </div>
       </div>
     );
