@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import "./register.css"
-import Logo from "../Logo"
+// import Logo from "../Logo"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 
@@ -42,8 +42,8 @@ const Register = () => {
             //console.log(user)
             await axios.post("http://localhost:5000/register", user)
              .then( res => {
-                console.log(res);
-                alert(res.data.message);
+                alert(res.data.message)
+                navigate("/login")
         })
         .catch(err=>{
             console.error(err);
@@ -57,8 +57,9 @@ const Register = () => {
 
     return (
       <div>
+        {/* <div>
         <Logo />
-
+        </div> */}
         <div className="center">
           <div className="outerbox">
             <div className="leftbox2">
@@ -66,7 +67,7 @@ const Register = () => {
               <div>
                 <button
                   type="button"
-                  onClick={() => navigate("/")}
+                  onClick={() => navigate("/login")}
                   class="rbutton btn btn-secondary btn-lg"
                 >
                   Login

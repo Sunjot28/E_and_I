@@ -1,10 +1,14 @@
 import React from "react";
 import "../App.css";
+import Logo from "./Logo";
 
 function Start() {
 
     return (
         <div>
+            <div>
+                <Logo />
+            </div>
             <div className="main-container">
                 <h1>Events & Internships</h1>
                 <p>What are you waiting for?</p>

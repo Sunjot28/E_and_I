@@ -1,10 +1,10 @@
 import React, {useState} from "react"
 import "./login.css"
-import Logo from "../Logo";
+// import Logo from "../Logo";
 import { useNavigate } from "react-router-dom"
 import axios from "axios";
 
-const Login = () => {
+const Login = ({setLoginUser}) => {
 
     const navigate = useNavigate();
 
@@ -23,12 +23,17 @@ const Login = () => {
 
     const login = () => {
         axios.post("http://localhost:5000/login", user)
-        .then(res => alert(res.data.message));
+        .then(res => {alert(res.data.message)
+          setLoginUser(res.data.user)
+          navigate("/home")
+        });
     }
 
     return (
       <div>
+        {/* <div>
         <Logo />
+        </div> */}
         <div className="center">
           <div className="outerbox">
             <div className="leftbox1">

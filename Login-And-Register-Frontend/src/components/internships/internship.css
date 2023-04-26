@@ -1,0 +1,143 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 1.666;
+    background: #f8f9fa;
+    color: #555;
+  }
+  
+  /* h1 {
+    text-align: center;
+    margin: 4rem;
+    line-height: 1.2;
+  }
+
+  .heading{
+    border-bottom: 1px solid #e8eaed;
+    width: 100%;
+  }
+  
+  h1 span {
+    font-family: sans-serif;
+    color: #3c4043;
+    font-size: 50px;
+    font-weight: 500;
+  } */
+
+  .header-container{
+    border-bottom: 1px solid #e8eaed;
+    width: 100%;
+  }
+
+  .header{
+    margin: 68px auto;
+    max-width: 1224px;
+    padding: 0 4%;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+
+  .title{
+    font-family: sans-serif;
+    color: #3c4043;
+    font-size: 50px;
+    font-weight: 500;
+    margin: 0 auto;
+  }
+  
+  .dictionary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 4rem auto;
+    max-width: 90%;
+  }
+  
+  .dictionary > .card {
+    /* text-align: center; */
+    justify-content: left;
+    max-width: 372px;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
+    background-color: #f1f3f4;
+    transition: all 100ms ease-in-out;
+  }
+
+  .dictionary > .card:hover {
+    box-shadow: 0 2px 0 rgba(13, 2, 2, 0.05), 0 5px 20px rgba(13, 2, 2, 0.271);
+  }
+  
+  .dictionary > .card > dt {
+    margin-bottom: 1rem;
+  }
+  
+  dt {
+    color: #2ec2b0;
+    line-height: 1;
+  }
+  
+  dt span {
+    font-size: 200%;
+    font-weight: 900;
+  }
+
+  .imageBox{
+    /* border: 1px solid ; */
+    margin-bottom: 10px;
+  }
+  
+  .image {
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+    width:  100%;
+    height: 150px;
+    font-size: 400%;
+    background-color: #f1f3f4;
+  }
+  
+  dd {
+    font-size: 92.5%;
+    margin-left: 0;
+  }
+
+  .flexible{
+    flex-grow: 1000;
+  }
+
+  dd span{
+    font-weight: 100%;
+    font-weight: 700;
+    color: #1967d2;
+    margin-left: 0;
+  }
+  
+  /* dd dt {
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    font-size: inherit;
+  }
+  
+  dd dl {
+    font-size: 90%;
+    margin: 1rem auto 0 auto;
+    letter-spacing: 0.33px;
+    max-width: 15rem;
+  } */
+  
+  /* dd dl .card {
+    margin-bottom: 1rem;
+  } */
+  
+  .btn-primary{
+    float: left;
+  }
+
+  .btn-secondary{
+    float: right;
+  }
+
+  
