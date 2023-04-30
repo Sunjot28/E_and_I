@@ -38,8 +38,8 @@ body {
   }
 
   .title{
-    font-family: sans-serif;
-    color: #3c4043;
+    font-family: "Montserrat";
+    color: #555;
     font-size: 50px;
     font-weight: 500;
     margin: 0 auto;
@@ -50,7 +50,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 4rem auto;
-    max-width: 90%;
+    max-width: 95%;
   }
   
   .dictionary > .card {

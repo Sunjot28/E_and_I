@@ -21,10 +21,14 @@ function createCard(eventDetails) {
 
 function event() {
   return (
-    <div>
+    <div className="bg-image">
       <Logo />
       <Navb />
-      <div className="heading">Events</div>
+      <div className="header-event-container">
+                <div className="header-event">
+                    <h1 className="title-event">Events</h1>
+                </div>
+            </div>
       <CardGroup className="Card_Group">
         {eventDetails.map(createCard)}
       </CardGroup>

@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import "./register.css"
-// import Logo from "../Logo"
+import Logo from "../Logo"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 
@@ -57,9 +57,9 @@ const Register = () => {
 
     return (
       <div>
-        {/* <div>
+        <div>
         <Logo />
-        </div> */}
+        </div>
         <div className="center">
           <div className="outerbox">
             <div className="leftbox2">

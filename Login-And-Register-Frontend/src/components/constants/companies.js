@@ -10,7 +10,7 @@ const companyData = [
         id: 2,
         content: "Our interns are a part of Google—involved and solving problems from the start. As a technical intern, you are excited about tackling the hard problems in technology. ",
         name: "Google",
-        image: "https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png",
+        image: "https://cdn.freebiesupply.com/logos/large/2x/google-1-1-logo-png-transparent.png",
         duration: "4 months",
     },
     {

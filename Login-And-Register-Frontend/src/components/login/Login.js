@@ -1,10 +1,12 @@
 import React, {useState} from "react"
 import "./login.css"
-// import Logo from "../Logo";
+import Logo from "../Logo";
 import { useNavigate } from "react-router-dom"
 import axios from "axios";
 
-const Login = ({setLoginUser}) => {
+const Login = ({setUser1}) => {
+
+// const Login = ({setLoginUser}) => {
 
     const navigate = useNavigate();
 
@@ -24,21 +26,20 @@ const Login = ({setLoginUser}) => {
     const login = () => {
         axios.post("http://localhost:5000/login", user)
         .then(res => {alert(res.data.message)
-          setLoginUser(res.data.user)
+          setUser1(res.data.user) // setLoginUser(res.data.user)
           navigate("/home")
         });
     }
 
     return (
       <div>
-        {/* <div>
+        <div>
         <Logo />
-        </div> */}
+        </div>
         <div className="center">
           <div className="outerbox">
             <div className="leftbox1">
               <h1>Login to Your Account</h1>
-
               <input
                 type="text"
                 onChange={handleChange}
@@ -62,7 +63,6 @@ const Login = ({setLoginUser}) => {
                   Login
                 </button>
               </div>
-
               <div className="or">OR</div>
 
               <a

@@ -3,26 +3,37 @@ import "../App.css";
 import { navLinks } from "./constants";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { useNavigate } from "react-router-dom";
 
-function Navb() {
+function Navb({handleLogout}) {
+  const navigate = useNavigate();
+
+  const handleLogoutClick = async () => {
+    await handleLogout;
+    navigate("/");
+  }
+
   return (
-    <Navbar className="navigation">
-      <Navbar.Brand href="#home" style={{ color: "white" }} className="ml-4">
-        Logo
-      </Navbar.Brand>
-      <Navbar.Collapse className="justify-content-end">
+
+    <Navbar id="navigation2" sticky="top">
+      <Navbar.Collapse className="justify-content-center">
         <Navbar className="justify-content-end">
           {navLinks.map((nav, index) => (
             <Nav.Link
               style={{ color: "white" }}
-              href={nav.link}
-              className={`zoom ${
-                index === navLinks.length - 1 ? "mr-0" : "mr-2"
-              }`}
-            >
+              onClick={() => navigate(nav.link)}
+              className={"zoom navLinks mr-5"
+              }>
               {nav.title}
             </Nav.Link>
           ))}
+          <Nav.Link
+              style={{ color: "white" }}
+              onClick={handleLogoutClick}
+                className={"zoom navLinks mr-0"
+              }>
+              Logout
+              </Nav.Link>
         </Navbar>
       </Navbar.Collapse>
     </Navbar>

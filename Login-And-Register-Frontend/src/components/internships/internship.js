@@ -1,6 +1,7 @@
 import React from "react";
 import Company from "./company-card";
 import companyData from "../constants/companies";
+import Logo from "../Logo";
 import Navb from "../Navb";
 import Details from "./view_details";
 import "./internship.css"
@@ -13,6 +14,7 @@ function Internships() {
 
     return (
         <div>
+            <Logo />
             <Navb />
             {/* <div className="heading">
                 <h1>
