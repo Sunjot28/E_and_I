@@ -60,7 +60,7 @@ import Internships from './components/internships/internship';
 import Start from './components/getstarted/getStarted';
 import Login from './components/login/Login';
 import Register from './components/register/Register';
-import ContactUs from './components/ContactUs';
+import ContactUs from './components/ContactUs/ContactUs';
 import Events from './components/Event';
 import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
 

@@ -24,6 +24,9 @@ app.use(session({
   cookie: {secure: true}
 }));
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 main().catch(err => console.log(err));
 
 async function main() {
@@ -39,12 +42,25 @@ const userSchema = new mongoose.Schema({
     name: {type: String, required: true},
     email: {type: String, required: true},
     password: {type: String, required: true},
-})
+    description: {
+      name: { type: Array, default: [] },
+      email: { type: Array, default: [] },
+      phoneNumber: { type: Array, default: [] },
+      feedback: { type: Array, default: [] }
+    }
+  });
 
 userSchema.plugin(passportLocalMongoose);
 userSchema.plugin(findOrCreate);
 
 const User = new mongoose.model("User", userSchema)
+
+passport.serializeUser(function (user, done) {
+  done(null, user);
+});
+passport.deserializeUser(function (user, done) {
+  done(null, user);
+});
 
 function isAuthenticated(req, res, next) {
     if(req.session && req.session.user) {
@@ -97,6 +113,27 @@ app.post("/register", (req, res)=> {
         })
     })
 });
+
+app.post("/contactus", (req, res) => {
+    const { name, email, phoneNumber, feedback } = req.body;
+  
+    User.findOne({email: email})
+    // User.findById(req.user._id)
+      .then(function(foundUser) {
+        foundUser.description.name.push(name);
+        foundUser.description.email.push(email);
+        foundUser.description.phoneNumber.push(phoneNumber);
+        foundUser.description.feedback.push(feedback);
+        foundUser.save()
+          .then(function () {
+            res.send({ message: "Your valuable feedback is much appreciated!"})
+          });
+      })
+      .catch(function (err) {
+        console.log(err);
+        res.status(500).send({ message: "Error occurred while saving feedback" });
+      });
+  });
 
 app.get("/logout", function(req, res){
   req.session.destroy(err => {

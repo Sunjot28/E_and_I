@@ -133,3 +133,117 @@
 #second-container .feature-text p{
     text-align: left;
 }
+
+/* Media queries for screens smaller than 768px */
+@media screen and (max-width: 767px) {
+    #main-container h1 {
+      font-size: 60px;
+      margin-top: -60px;
+    }
+    
+    #main-container > p {
+      font-size: 24px;
+    }
+    
+    .main-btns .btns {
+      font-size: 12px;
+      width: 120px;
+      padding: 10px 0;
+    }
+    
+    #second-container .title-text h1 {
+      font-size: 40px;
+      margin-top: 30px;
+    }
+    
+    #second-container .features {
+      flex-basis: 100%;
+      margin-top: 30px;
+    }
+    
+    #second-container .features-img {
+      display: none;
+    }
+    
+    #second-container .feature-box {
+      width: 100%;
+    }
+    
+    #second-container .feature-text p {
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+  
+  /* Media queries for screens between 768px and 1024px */
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    #main-container h1 {
+      font-size: 80px;
+      margin-top: -80px;
+    }
+    
+    #main-container > p {
+      font-size: 28px;
+    }
+    
+    .main-btns .btns {
+      font-size: 14px;
+      width: 130px;
+      padding: 11px 0;
+    }
+    
+    #second-container .title-text h1 {
+      font-size: 45px;
+      margin-top: 40px;
+    }
+    
+    #second-container .features {
+      flex-basis: 50%;
+      margin-top: 50px;
+    }
+    
+    #second-container .features-img img {
+      width: 70%;
+    }
+    
+    #second-container .feature-text p {
+      margin-top: 20px;
+    }
+  }
+  
+  /* Media queries for screens larger than 1024px */
+  @media screen and (min-width: 1024px) {
+    #main-container h1 {
+      font-size: 100px;
+      margin-top: -100px;
+    }
+    
+    #main-container > p {
+      font-size: 32px;
+    }
+    
+    .main-btns .btns {
+      font-size: 15px;
+      width: 150px;
+      padding: 12px 0;
+    }
+    
+    #second-container .title-text h1 {
+      font-size: 50px;
+      margin-top: 50px;
+    }
+    
+    #second-container .features {
+      flex-basis: 50%;
+      margin-top: 70px;
+    }
+    
+    #second-container .features-img img {
+      width: 80%;
+    }
+    
+    #second-container .feature-text p {
+      margin-top: 30px;
+    }
+  }
+  
